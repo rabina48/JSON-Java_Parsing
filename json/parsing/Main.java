@@ -34,8 +34,8 @@ public class Main {
             String name = object.getString("name");
             System.out.println("The name is = "+name);
 
-//            String ppu = object.getDouble(ppu);
-//            System.out.println("The price per use is ="+ppu);
+           double ppu = object.getDouble("ppu");
+           System.out.println("The price per use is ="+ppu);
 
         } catch (IOException e) {
             e.printStackTrace();
