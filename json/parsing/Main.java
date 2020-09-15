@@ -12,11 +12,22 @@ import java.nio.file.Paths;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
 
-        FileReader fileReader = new FileReader(Parsing.path1);
+        FileReader fileReader = new FileReader(FoodParser.path1);
         fileReader.read();
-        Parsing.jsonParser();
+
+        FoodParser foodParser = new FoodParser();
+        foodParser.parseFood();
+        foodParser.display();
+
+
+
+
+
+
+
+
 
 
     }

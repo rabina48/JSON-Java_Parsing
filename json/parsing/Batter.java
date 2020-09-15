@@ -1,10 +1,25 @@
 package json.parsing;
 
 public class Batter {
-    String id, type;
+        public String id;
+        public String type;
 
-    Batter(String id, String type){
-        this.id = id;
-        this.type = type;
-    }
+        Batter(){
+
+        }
+
+        Batter(String id , String type){
+            this.id = id;
+            this.type = type;
+        }
+
+//public Batters readBatters(){
+//
+//}
+
+
 }
+
+
+
+
