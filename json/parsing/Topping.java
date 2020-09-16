@@ -1,5 +1,7 @@
 package json.parsing;
 
+import org.json.JSONArray;
+
 import java.util.List;
 
 public class Topping {
