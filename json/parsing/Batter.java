@@ -13,6 +13,8 @@ public class Batter {
             this.type = type;
         }
 
+
+
 //public Batters readBatters(){
 //
 //}

@@ -1,22 +1,20 @@
 package json.parsing;
 
-import org.json.JSONObject;
-
 import java.util.List;
 
 public class Batters {
-     List<Batter> batter;
-    List<Batter> topping;
+     List<Batter> batters;
+
        Batters(){
 
        }
 
-       Batters( List<Batter> batter, List<Batter> topping) {
-        this.batter = batter;
-        this.topping = topping;
+       Batters( List<Batter> batters) {
+        this.batters = batters;
+
     }
 
 
-    public Batters(JSONObject batter) {
-    }
+//    public Batters(JSONObject batter) {
+//    }
 }
