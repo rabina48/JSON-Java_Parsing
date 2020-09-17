@@ -1,0 +1,54 @@
+{
+  "items":
+  {
+    "info":
+    {
+      "$schema": "http://json-schema.org/draft/2019-09/schema",
+      "title": "Product",
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "price"
+      ],
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "Product identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the product"
+        },
+        "price": {
+          "type": "number",
+          "minimum": 0
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stock": {
+          "type": "object",
+          "properties": {
+            "warehouse":
+                [
+                  {"id": 1002, "type": "WashingClothes","presence": true},
+                  {"id": 1003, "type": "WashingDish", "presence": false},
+                  {"id": 1004, "type": "RecyclingPlastic","presence": true},
+                  {"id": 1005, "type": "gyraze","presence": false}
+
+                ]
+
+            },
+            "retail": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}
