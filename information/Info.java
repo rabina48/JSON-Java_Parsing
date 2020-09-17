@@ -9,7 +9,10 @@ public class Info {
     public List<String> required;
     public Properties properties;
 
-    public Info(String $schema, String title, String type, List<String> required, Properties properties) {
+    Info(){
+
+    }
+    protected Info(String $schema, String title, String type, List<String> required, Properties properties) {
         this.$schema = $schema;
         this.title = title;
         this.type = type;
