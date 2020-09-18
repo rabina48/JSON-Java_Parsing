@@ -7,6 +7,9 @@ public class Properties {
     public PropertiesTag tags;
     public PropertiesStock stock;
 
+    public  Properties(){
+
+    }
     public Properties(PropertiesId id, PropertiesName name, PropertiesPrice price, PropertiesTag tags, PropertiesStock stock) {
         this.id = id;
         this.name = name;
