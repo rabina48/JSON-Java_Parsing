@@ -13,4 +13,6 @@ StockProperties(){
         this.warehouse = warehouse;
         this.retail = retail;
     }
+
+
 }

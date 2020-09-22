@@ -11,5 +11,6 @@ public class PropertiesName {
     public PropertiesName(String type, String description) {
         this.type = type;
         this.description = description;
+
     }
 }

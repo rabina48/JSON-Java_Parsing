@@ -1,5 +1,7 @@
 package json.parsing.information;
 
+import java.util.List;
+
 public class Warehouse {
     public int id;
     public String type;

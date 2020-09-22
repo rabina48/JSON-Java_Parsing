@@ -3,6 +3,7 @@ package json.parsing.information;
 public class PropertiesPrice {
     public String type;
     public int minimum;
+    public PropertiesPrice price;
 
     PropertiesPrice(){
 

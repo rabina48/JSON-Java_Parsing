@@ -2,14 +2,14 @@ package json.parsing.information;
 
 public class PropertiesTag {
     public String type;
-    public TagsItem item;
+    public TagsItem items;
 
     PropertiesTag(){
 
     }
 
-    public PropertiesTag(String type, TagsItem item) {
+    public PropertiesTag(String type, TagsItem items) {
         this.type = type;
-        this.item = item;
+        this.items = items;
     }
 }

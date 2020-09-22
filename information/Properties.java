@@ -17,4 +17,6 @@ public class Properties {
         this.tags = tags;
         this.stock = stock;
     }
+
+
 }

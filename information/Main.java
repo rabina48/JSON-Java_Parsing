@@ -11,15 +11,16 @@ public class Main  {
         InformationReader informationReader = new InformationReader(InfoParser.path);
         String json = informationReader.fileRead();
 
-
-
-
        InfoParser parser = new InfoParser();
-       parser.parseInformation(json);
-       parser.getProperties();
+         Information info = parser.parseInformation(json);
+
 
        DisplayOutput displayOutput = new DisplayOutput();
-       displayOutput.showDisplay();
+
+      displayOutput.showDisplay(info);
+
+
+
 
 
 

@@ -1,14 +1,15 @@
 package json.parsing.information;
 
 public class Information {
-    public Information items;
-    public Info info;
+    public Items items;
 
-    Information(){
+    Information(Items items){
+        this.items = items;
 
     }
-    public Information(Information items, Info info) {
-        this.items = items;
-        this.info = info;
+
+
+    public Information() {
+
     }
 }
