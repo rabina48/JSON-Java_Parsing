@@ -5,22 +5,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class ReadWebPage {
-    String url;
+    static String url;
 
     ReadWebPage(String url){
         this.url = url;
 
     }
 
-    public  String urlReader()  {
+    public  HttpURLConnection urlReader() throws IOException {
+        URL u = new URL(url);
+        HttpURLConnection httpURLConnection =(HttpURLConnection) u.openConnection();
 try{
-    URL u = new URL(url);
-    HttpURLConnection httpURLConnection =(HttpURLConnection) u.openConnection();
-
-    //httpURLConnection.setRequestMethod("GET");
-
-       // System.out.println(httpURLConnection.getResponseCode());
-    if (httpURLConnection.getResponseCode() == 200){
+    int responseCode = httpURLConnection.getResponseCode();
+    if (responseCode == HttpURLConnection.HTTP_OK){
 
         InputStream input = httpURLConnection.getInputStream();
         StringBuffer stringBuffer = new StringBuffer();
@@ -37,5 +34,5 @@ try{
     e.printStackTrace();
     }
 
-        return url;
+        return httpURLConnection;
 }}
