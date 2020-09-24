@@ -23,11 +23,13 @@ try{
         StringBuffer stringBuffer = new StringBuffer();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(input));
         String readLine = bufferedReader.readLine();
+        String data = "";
         while (readLine != null){
-
+            data = data + readLine;
             System.out.println(readLine);
             readLine = bufferedReader.readLine();
         }
+        System.out.println(data);
     }
 
     }catch (IOException e){
