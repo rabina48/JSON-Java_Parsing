@@ -9,7 +9,7 @@ import java.net.URL;
 public class ResponePost {
     String url = "http://ares.rasxp.com:8888/login";
     String email = "rabina@gmail.com";
-    String password = "your/*/--pass";
+    String password = "ur/*/--pass";
 
 public void getPost() throws IOException {
     URL urlObj = new URL(url);
@@ -20,6 +20,8 @@ public void getPost() throws IOException {
 
     String parameters = "username=" + email;
     parameters += "password=" + password;
+    System.out.println("Success = "+httpCon.getResponseCode());
+
 
 
     OutputStreamWriter writer = new OutputStreamWriter(
