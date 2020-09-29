@@ -1,13 +1,12 @@
 package httpurl;
 
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class ResponePost {
-    String url = "http://ares.rasxp.com:8888/login";
+    String url = "http://ares.rasxp.com:8888/auth/login";
     String email = "rabina@gmail.com";
     String password = "ur/*/--pass";
 
@@ -19,8 +18,8 @@ public void getPost() throws IOException {
     httpCon.setRequestMethod("POST");
 
     String parameters = "username=" + email;
-    parameters += "password=" + password;
-    System.out.println("Success = "+httpCon.getResponseCode());
+    parameters += "&password=" + password;
+
 
 
 
@@ -30,6 +29,19 @@ public void getPost() throws IOException {
 
     writer.write(parameters);
     writer.flush();
+    try(InputStream inputStream = httpCon.getInputStream()){
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        String response = "";
+        String line;
+        while ((line = reader.readLine()) != null){
+            response += line;
+        }
+
+        System.out.println(response);
+        System.out.println(httpCon.getResponseCode());
+        reader.close();
+
+    }
 
 }
 

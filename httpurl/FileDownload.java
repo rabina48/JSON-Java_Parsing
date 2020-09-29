@@ -20,11 +20,11 @@ public class FileDownload {
                 BufferedInputStream inputStream = new BufferedInputStream(new URL(path).openStream());
 
                 FileOutputStream fileOutputStream = new FileOutputStream("/home/rabina/Documents/http.txt");
-                    byte data[] = new byte[2048];
-                    int byteContent;
-                    while ((byteContent = inputStream.read()) != -1) {
-                        fileOutputStream.write(data, 0, byteContent);
-                    }
+                byte data[] = new byte[2048];
+                int byteContent;
+                while ((byteContent = inputStream.read()) != -1) {
+                    fileOutputStream.write(data, 0, byteContent);
+                }
 
 
                 System.out.println("Download Sucess!");
